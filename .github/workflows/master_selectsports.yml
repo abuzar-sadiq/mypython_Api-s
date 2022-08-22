@@ -67,21 +67,5 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6F3AFCCBD2EA407DA945FBECC14A10F3 }}
 
 
-# here requirments added
-name1: Integration Test
-on1: [push]
-jobs1:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Self test
-        id: selftest
 
-        uses: ryan-rozario/pipreqs-action-cpy@master
-
-        # Put an example of mandatory inputs here
-        with:
-          PROJECT_PATH: https://github.com/abuzar-sadiq/mypython_Api-s  #default is the root of the repository
-          REQUIREMENT_PATH: https://github.com/abuzar-sadiq/mypython_Api-s  #default is requirement.txt in the root of your repository
 
